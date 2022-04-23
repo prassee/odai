@@ -4,7 +4,9 @@
 
 This project implements SQL abstractions as in Flink , Kafka and Spark Streams etc.
 
-+ consume data from kafka topic (thats the focus for trhe time being) using - ~rust-rdkafka~ 
-+ apply some transformations on the data and save them to table (internal) - ~gluesql~
-+ print the results by runing select queries on the above table - ~gluesql~
+Stage - 1
+
++ [ ] consume data from kafka topic (thats the focus for trhe time being) using - ~rust-rdkafka~ 
++ [ ] apply some transformations on the data and save them to table (internal) - ~gluesql~
++ [ ] print the results by runing select queries on the above table - ~gluesql~
   
