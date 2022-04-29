@@ -1,4 +1,5 @@
 use crate::stream;
+
 /*
 after a map operation
 by explicitly enforce it with generic params of the resulting stream.
@@ -8,6 +9,20 @@ maintain app level schema registry :-
 - makes code verbose
 */
 pub fn insert_select_demo() {
-    let stream = stream::StreamTxfrm::new("txns".to_string());
-    stream.add(100);
+    let schema = stream::Schema::new(
+        "txns_table".to_string(),
+        vec![
+            stream::Column {
+                name: "id".to_string(),
+                data_type: "INTEGER".to_string(),
+            },
+            stream::Column {
+                name: "value".to_string(),
+                data_type: "INTEGER".to_string(),
+            },
+        ],
+    );
+    let stream = stream::StreamTxfrm::new(&schema);
+    stream.add(schema.name, 100);
+    // stream.add(100);
 }
