@@ -1,6 +1,6 @@
 * Odai
 
-"Odai" (to be pronounced as "o" + "dye") is a Tamil word that means "Stream".
+"Odai" (to be pronounced as "oh" + "die") is a Tamil word that means "Stream".
 
 This project implements SQL abstractions as in Flink, Kafka and Spark Streams etc.
 
