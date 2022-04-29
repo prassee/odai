@@ -2,11 +2,15 @@
 
 "Odai" (to be pronounced as "o" + "dye") is a Tamil word that means "Stream".
 
-This project implements SQL abstractions as in Flink , Kafka and Spark Streams etc.
+This project implements SQL abstractions as in Flink, Kafka and Spark Streams etc.
 
-Stage - 1
+Stage - 1 (idempotent,stand-alone)
 
-+ [ ] consume data from kafka topic (thats the focus for trhe time being) using - ~rust-rdkafka~ 
-+ [ ] apply some transformations on the data and save them to table (internal) - ~gluesql~
++ [ ] consume data from kafka topic (thats the focus for trhe time being) using - ~rust-rdkafka~
+  + format consumed data with a schema
++ [ ] save consumed data to table (internal) - ~gluesql~
+  + create a table on gluesql 
+  + insert consumed data the table
 + [ ] print the results by runing select queries on the above table - ~gluesql~
+  + programmatic  API to generate SQL - ~sql-builder~
   

@@ -1,3 +1,6 @@
+mod rundemo;
+mod stream;
 fn main() {
-    println!("Hello, world!");
+    // hello_world::demo();
+    rundemo::insert_select_demo();
 }
